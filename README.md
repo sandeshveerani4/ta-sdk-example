@@ -1,6 +1,6 @@
 # TA-SDK-Example
 
-This repository contains a React-based starter app for using the [![NPM](https://nodei.co/npm/ta-agent-sdk.svg?style=mini)](https://nodei.co/npm/ta-agent-sdk/)
+This repository contains a React-based starter app for using the [![NPM](https://nodei.co/npm/ta-agent-sdk.svg?style=mini)](https://www.npmjs.com/package/ta-agent-sdk)
 
 ## Live Demo
 
