@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: #000000;
+  --gray-200: #b4b8bb;
+  --gray-300: #80868b;
+  --gray-500: #5f6368;
+  --gray-600: #444444;
+  --gray-700: #202020;
+  --gray-800: #171717;
+  --gray-900: #111111;
+  --gray-1000: #0a0a0a;
+  --border-stroke: #444444;
+  --accent-blue: rgb(161, 228, 242);
+  --accent-blue-active-bg: #001233;
+  --accent-blue-active: #98beff;
+  --accent-blue-headers: #448dff;
+  --accent-green: rgb(168, 218, 181);
+
+  --midnight-blue: rgb(0, 18, 51);
+  --blue-30: #99beff;
+  --accent-red: #ff4600;
+
+  --ui-green: #07ea5c;
+  --ui-blue: #015aff;
+  --ui-blue-dark: #013fcc;
+
+  --background: var(--gray-900);
+  --color: var(--text);
+
+  scrollbar-color: var(--gray-600) var(--gray-900);
+  scrollbar-width: thin;
+
+  --font-family: "TripSansRegular", sans-serif;
+
+  --Neutral-00: #000;
+  --Neutral-5: #ffffff;
+  --Neutral-10: #1c1f21;
+  --Neutral-15: #232729;
+  --Neutral-20: #2a2f31;
+  --Neutral-30: #404547;
+  --Neutral-50: #707577;
+  --Neutral-60: #888d8f;
+  --Neutral-80: #c3c6c7;
+  --Neutral-90: #e1e2e3;
+
+  --Green-500: #0d9c53;
+  --Green-700: #025022;
+
+  --Blue-500: #1f94ff;
+  --Blue-800: #0f3557;
+
+  --Red-400: #ff9c7a;
+  --Red-500: #ff4600;
+  --Red-600: #e03c00;
+  --Red-700: #bd3000;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: "TripSansRegular", sans-serif;
+  background: var(--Neutral-5);
+}
+
+.material-symbols-outlined.filled {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.trip-sans-regular {
+  font-family: "TripSansRegular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.trip-sans-bold {
+  font-family: "TripSansBold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.trip-sans-medium {
+  font-family: "TripSansMedium", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.trip-sans-ultra {
+  font-family: "TripSansUltra", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-screen-full {
+  height: 100vh;
+}
+
+.w-screen-full {
+  width: 100vw;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+}
+
+.streaming-console {
+  color: var(--gray-300);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.streaming-console a,
+.streaming-console a:visited,
+.streaming-console a:active {
+  color: var(--gray-300);
+}
+
+.streaming-console .disabled {
+  pointer-events: none;
+}
+
+.streaming-console .disabled > * {
+  pointer-events: none;
+}
+
+.streaming-console main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  gap: 1rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.streaming-console .main-app-area {
+  display: flex;
+  flex: initial;
+  justify-content: center;
+  width: 70%;
+  height: 80%;
+}
+
+.streaming-console .function-call {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  overflow-y: auto;
+}
+
+.stream {
+  flex-grow: 1;
+  max-width: 90%;
+  border-radius: 32px;
+  max-height: fit-content;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.video-container:after {
+  content: "";
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.textarea-wrapper {
+  position: absolute;
+}
+
+.send-button {
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+/* Add this CSS to style the text area */
+.input-area1 {
+  background-color: #333; /* Dark gray background */
+  color: #fff; /* White text */
+  /* Add any additional styling you need */
+  height: 50px; /* Set height to 100px */
+  width: 500px; /* Increase width by 300px */
+  padding-top: 10px; /* Padding for better appearance */
+  padding-left: 10px; /* Padding for better appearance */
+  padding-right: 10px; /* Padding for better appearance */
+  border: none; /* Remove border */
+  border-radius: 12px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Center the text area above the controls */
+.input-content1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px; /* Space between text area and controls */
+}
+
+.overflow-y-auto {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 3px;
+}
+
+p.error {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+  width: 300px;
+  border-radius: 20px;
+  text-align: center;
+  background: #ffcc02;
+  color: black;
+  padding: 4px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
