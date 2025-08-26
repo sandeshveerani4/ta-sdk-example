@@ -2,6 +2,10 @@
 
 This repository contains a React-based starter app for using the [TA Agent SDK](https://www.npmjs.com/package/ta-agent-sdk).
 
+## Live Demo
+
+The app is deployed at: https://ta-agent-sdk.netlify.app/
+
 ## Setup
 
 ### Environment Configuration
