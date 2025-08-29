@@ -14,6 +14,7 @@ function App() {
       ...(process.env.REACT_APP_BACKEND_HOST && {
         backendHost: process.env.REACT_APP_BACKEND_HOST,
       }),
+      agent: "activetheory",
     });
   }, []);
 
