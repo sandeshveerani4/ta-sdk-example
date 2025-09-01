@@ -14,7 +14,7 @@ function App() {
       ...(process.env.REACT_APP_BACKEND_HOST && {
         backendHost: process.env.REACT_APP_BACKEND_HOST,
       }),
-      agent: "activetheory",
+      agent: "semantic",
     });
   }, []);
 
@@ -27,7 +27,6 @@ function App() {
   >([]);
 
   useEffect(() => {
-    const changePlace = () => {};
     const playVideo = () => {
       const videoElement = document.querySelector("video");
       if (videoElement) {
@@ -48,14 +47,12 @@ function App() {
     };
 
     agent.onEvent("switchRecommendations", changeRecommendations);
-    agent.onEvent("changePlace", changePlace);
     agent.onEvent("playVideo", playVideo);
     agent.onAnyEvent = (type, payload, incoming) => {
       setEvents((prevEvents) => [{ type, payload, incoming }, ...prevEvents]);
     };
     return () => {
       agent.offEvent("switchRecommendations", changeRecommendations);
-      agent.offEvent("changePlace", changePlace);
       agent.offEvent("playVideo", playVideo);
     };
   }, [agent]);
