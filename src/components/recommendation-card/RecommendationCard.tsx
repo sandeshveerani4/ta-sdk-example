@@ -44,7 +44,7 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({
     };
 
     const handleCardClick = () => {
-      agent.sendEvent("changePlace", location.tripadvisor_id);
+      agent.sendEvent("changePlace", location);
     };
 
     return (
@@ -157,7 +157,7 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({
     const coordinates = experience.coordinates;
 
     const handleCardClick = () => {
-      agent.sendEvent("changePlace", experience.tripadvisor_id);
+      agent.sendEvent("changePlace", experience);
     };
 
     return (
