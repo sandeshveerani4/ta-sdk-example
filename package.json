@@ -22,7 +22,7 @@
     "vega-lite": "^5.22.0",
     "web-vitals": "^2.1.4",
     "zustand": "^5.0.1",
-    "ta-agent-sdk": "^1.0.39"
+    "ta-agent-sdk": "^1.0.40"
   },
   "scripts": {
     "start-https": "HTTPS=true react-scripts start",
