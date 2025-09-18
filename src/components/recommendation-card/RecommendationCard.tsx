@@ -16,7 +16,7 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({
   const isExperience = "experience" in recommendation;
 
   const photos = recommendation.photos;
-  const mainPhoto = photos ? photos.photos[0] : undefined;
+  const mainPhoto = photos?.photos ? photos.photos[0] : undefined;
 
   if (isLocation) {
     const { location, review_sources } = recommendation;
